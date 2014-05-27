@@ -13,19 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package nebula.plugin.scm
+package nebula.plugin.scm.providers
 
-import nebula.plugin.scm.providers.ScmFactory
-import org.gradle.api.Plugin
-import org.gradle.api.Project
-
-class ScmPlugin implements Plugin<Project> {
-    static final String FACTORY_NAME = 'scmFactory'
+class NoOpScmProvider extends ScmProvider {
+    @Override
+    Boolean switchToBranch(String branch) { 
+        true
+    }
 
     @Override
-    void apply(Project project) {
-        if (!project.rootProject.ext.has(FACTORY_NAME)) {
-            project.rootProject.ext.set(FACTORY_NAME, new ScmFactory())    
-        }
+    Boolean updateFromRepository() { 
+        true
     }
+
+    @Override
+    Boolean commit(String message, List<String> files) { 
+        true
+    }
+
+    @Override
+    Boolean tag(String tagname, String message = null) { 
+        true
+    }
+
+    @Override
+    Boolean preChanges(List<String> files) { 
+        true
+    }
+
+    @Override
+    Boolean undoChanges() { 
+        true
+    }    
 }

@@ -13,14 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package nebula.plugin.scm.providers
+package nebula.plugin.scm
 
-/**
- * The list of actions an SCM provider would need to support
- */
-interface ScmActions {
-    Boolean updateFromRepository()
-    Boolean makeChanges()
-    Boolean shareChanges()
-    Boolean undoChanges()    
+import nebula.plugin.scm.providers.NoOpScmProvider
+import nebula.plugin.scm.providers.ScmProvider
+import nebula.test.PluginProjectSpec
+
+class ScmPluginSpec extends PluginProjectSpec {
+    String pluginName = 'gradle-scm'
+
+    def 'no op provider is created'() {
+        project.apply plugin: pluginName
+
+        when:
+        def provider = project.scmFactory.create()
+
+        then:
+        noExceptionThrown()
+        provider instanceof NoOpScmProvider
+        provider instanceof ScmProvider
+    }
 }
