@@ -15,7 +15,7 @@
  */
 buildscript {
     repositories { jcenter() }
-    dependencies { classpath 'com.netflix.nebula:nebula-plugin-plugin:1.11.+' }
+    dependencies { classpath 'com.netflix.nebula:nebula-plugin-plugin:1.12.+' }
 }
 
 description 'Plugin to setup common SCM operations and information gathering'
@@ -24,7 +24,7 @@ apply plugin: 'gradle-dependency-lock'
 apply plugin: 'idea'
 
 dependencies {
-    testCompile 'com.netflix.nebula:nebula-test:1.11.+'
+    testCompile 'com.netflix.nebula:nebula-test:1.12.+'
 }
 
 contacts {
