@@ -15,7 +15,7 @@
  */
 buildscript {
     repositories { jcenter() }
-    dependencies { classpath 'com.netflix.nebula:nebula-plugin-plugin:2.0.0-RC1' }
+    dependencies { classpath 'com.netflix.nebula:nebula-plugin-plugin:2.0.+' }
 }
 
 description 'Plugin to setup common SCM operations and information gathering'
