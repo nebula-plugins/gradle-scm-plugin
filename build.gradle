@@ -44,7 +44,7 @@ apply from: 'https://raw.githubusercontent.com/nebula-plugins/nebula-core/1a495c
 pluginBundle {
     plugins {
         scm {
-            id = 'gradle-scm-plugin'
+            id = 'nebula.gradle-scm'
             displayName = 'Gradle SCM Plugin'
             description = project.description
             tags = ['nebula', 'scm']
