@@ -55,6 +55,14 @@ abstract class ScmProvider {
     }
 
     /**
+     * Tell if there are outstanding changes to the repository.
+     */
+    Boolean hasChanges() {
+        // Assume we have changes unless underlying provider can say otherwise.
+        return true;
+    }
+
+    /**
      * Allow an SCM provider the chance to do any actions it needs to before another plugin edits a file.
      * For many SCM providers this will be a no-op.
      */
