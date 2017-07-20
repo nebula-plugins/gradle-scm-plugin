@@ -3,7 +3,7 @@ git:
 language: java
 sudo: false
 jdk:
-- oraclejdk7
+- openjdk7
 install: true
 script: "./gradle/buildViaTravis.sh"
 cache:
