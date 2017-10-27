@@ -1,5 +1,5 @@
 git:
-  depth: 100
+  depth: 150
 language: java
 sudo: false
 jdk: oraclejdk8
