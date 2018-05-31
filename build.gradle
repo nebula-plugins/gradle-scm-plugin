@@ -16,7 +16,7 @@
 
 
 plugins {
-    id 'nebula.plugin-plugin' version '6.1.1'
+    id 'nebula.plugin-plugin' version '7.0.0'
 }
 
 description 'Plugin to setup common SCM operations and information gathering'
