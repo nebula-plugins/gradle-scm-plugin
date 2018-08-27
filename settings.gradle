@@ -1,1 +1,4 @@
 rootProject.name = 'gradle-scm-plugin'
+
+enableFeaturePreview('STABLE_PUBLISHING')
+
