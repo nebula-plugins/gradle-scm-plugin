@@ -2,7 +2,7 @@ git:
   depth: 150
 language: java
 sudo: false
-jdk: oraclejdk8
+jdk: openjdk8
 install: true
 script: "./gradle/buildViaTravis.sh"
 cache:
