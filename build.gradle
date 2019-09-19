@@ -16,10 +16,12 @@
 
 
 plugins {
-    id 'nebula.plugin-plugin' version '12.4.0'
+    id 'nebula.plugin-plugin' version '12.4.1'
 }
 
 description 'Plugin to setup common SCM operations and information gathering'
+
+compileGroovy.groovyOptions.configurationScript = file('src/groovyCompile/groovycConfig.groovy')
 
 contacts {
     'rob.spieldenner@gmail.com' {

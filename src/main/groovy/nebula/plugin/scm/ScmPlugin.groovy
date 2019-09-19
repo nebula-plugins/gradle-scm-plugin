@@ -15,6 +15,7 @@
  */
 package nebula.plugin.scm
 
+import groovy.transform.CompileDynamic
 import nebula.plugin.scm.providers.ScmFactory
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -22,6 +23,7 @@ import org.gradle.api.Project
 class ScmPlugin implements Plugin<Project> {
     static final String FACTORY_NAME = 'scmFactory'
 
+    @CompileDynamic
     @Override
     void apply(Project project) {
         if (!project.rootProject.ext.has(FACTORY_NAME)) {
