@@ -16,7 +16,7 @@
 
 
 plugins {
-    id 'nebula.plugin-plugin' version '16.3.0'
+    id 'nebula.plugin-plugin' version '17.0.0'
 }
 
 description 'Plugin to setup common SCM operations and information gathering'
@@ -31,12 +31,16 @@ contacts {
 }
 
 pluginBundle {
+    tags = ['nebula', 'scm']
+}
+
+gradlePlugin {
     plugins {
         scm {
             id = 'nebula.gradle-scm'
             displayName = 'Gradle SCM Plugin'
             description = project.description
-            tags = ['nebula', 'scm']
+            implementationClass = 'nebula.plugin.scm.ScmPlugin'
         }
     }
 }
