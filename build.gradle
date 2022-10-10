@@ -37,7 +37,7 @@ pluginBundle {
 gradlePlugin {
     plugins {
         scm {
-            id = 'nebula.gradle-scm'
+            id = 'com.netflix.nebula.gradle-scm'
             displayName = 'Gradle SCM Plugin'
             description = project.description
             implementationClass = 'nebula.plugin.scm.ScmPlugin'

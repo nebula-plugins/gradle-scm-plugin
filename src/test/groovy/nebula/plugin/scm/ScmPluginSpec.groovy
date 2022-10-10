@@ -20,7 +20,7 @@ import nebula.plugin.scm.providers.ScmProvider
 import nebula.test.PluginProjectSpec
 
 class ScmPluginSpec extends PluginProjectSpec {
-    String pluginName = 'nebula.gradle-scm'
+    String pluginName = 'com.netflix.nebula.gradle-scm'
 
     def 'no op provider is created'() {
         project.apply plugin: pluginName
